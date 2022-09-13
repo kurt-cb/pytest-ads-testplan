@@ -37,7 +37,6 @@ setup(
     license='GPL v3',
     long_description=open('README.md').read(),
     install_requires=reqs,
-    scripts=['scripts/mm','scripts/mdb'],
     entry_points={"pytest11": ["ads-testplan = pytest_ads_testplan"]},
     # custom PyPI classifier for pytest plugins
     classifiers=["Framework :: Pytest"],
