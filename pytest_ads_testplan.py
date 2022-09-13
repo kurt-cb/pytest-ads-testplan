@@ -98,7 +98,7 @@ class AdsTestPlugin:
                 )
             print("Test run id: ", test_run.id)
             print("Test result: ", result)
-            self.test_client.add_test_results_to_test_run([result], project, run_id)
+            self.test_client.add_test_results_to_test_run([result], self.project, self.run_id)
         except Exception as e:
             print(e)
         return True
@@ -118,7 +118,8 @@ def pytest_configure(config):
 
     if hasattr(config.option, 'adsinfo'):
         info = config.option.adsinfo
-        (org, project, plan) = info.split(',')
-        config.pluginmanager.register(AdsTestPlugin(personal_access_token, org, project, plan))
+        if info:
+            (org, project, plan) = info.split(',')
+            config.pluginmanager.register(AdsTestPlugin(personal_access_token, org, project, plan))
 
 
