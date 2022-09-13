@@ -11,7 +11,7 @@ import os
 import codecs
 from setuptools import setup
 
-__version__ = "1.0.3"
+__version__ = "0.0.1"
 
 
 def read(fname):
@@ -37,7 +37,6 @@ setup(
     license='GPL v3',
     long_description=open('README.md').read(),
     install_requires=reqs,
-    python_requires='>=3.8',
     scripts=['scripts/mm','scripts/mdb'],
     entry_points={"pytest11": ["ads-testplan = pytest_ads_testplan"]},
     # custom PyPI classifier for pytest plugins
