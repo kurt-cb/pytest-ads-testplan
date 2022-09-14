@@ -1,0 +1,2 @@
+[pytest11]
+ads-testplan = pytest_ads_testplan
