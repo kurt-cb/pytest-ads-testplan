@@ -232,7 +232,7 @@ class AdsTestPlugin(object):
         bld_id = os.getenv("DOWNLOADPIPELINEARTIFACT_BUILDNUMBER")
         self.build_number="private build"
         if bld_id:
-            build = self.build_client.get_build(project, bld_id)
+            build = self.build_client.get_build(self.project, bld_id)
             print("Build Artifact: ", build)
             self.build_number = build['build_number']
         else:
