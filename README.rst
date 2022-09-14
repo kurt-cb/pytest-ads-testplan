@@ -1,11 +1,31 @@
+===================
+pytest-ads-testplan
+===================
 
-Pytest plugin to support Azure Test Plan updating for test cases
+.. image:: https://img.shields.io/pypi/v/pytest-ads-testplan.svg
+    :target: https://pypi.org/project/pytest-ads-testplan
+    :alt: PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-ads-testplan.svg
+    :target: https://pypi.org/project/pytest-ads-testplan
+    :alt: Python versions
+
+.. image:: https://img.shields.io/pypi/dm/pytest-ads-testplan.svg
+     :target: https://pypi.python.org/pypi/pytest-ads-testplan/
+     :alt: PyPI download month
+
+.. image:: https://anaconda.org/conda-forge/pytest-ads-testplan/badges/version.svg
+     :target: https://anaconda.org/conda-forge/pytest-ads-testplan
+
+Make Pytest integrate into Microsoft Azure Test Plans and Pipelines.
+
+Just run pytest with this plugin and see your test results connected to your Test Plan.  You do need to mark the tests with the suite id and test case for this to work.
 
 Overview
 ========
 This pytest plugin will create an Azure Test Run and append TestResults to the test run as the tests are executed on a pipeline execution of a pytest test run.
 
-This plugin is not ment to work with other reporting plugins like pytest-nunit and pytest-azurepipelines.  Using this test with those plugins will cause duplicate test results to be reported on the pipeline.
+This plugin is not ment to work with other reporting plugins like pytest-nunit and pytest-ads-testplan.  Using this test with those plugins will cause duplicate test results to be reported on the pipeline.
 
 Unlike the pytest-azurepipeline plugin, this plugin does not use NUnit to generate a report, then process the report.  Instead, it upates the running tests as they complete.  Therefore, a long running test can have it's progress tracked in Azure Test Runs
 
