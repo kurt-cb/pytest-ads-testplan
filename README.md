@@ -22,6 +22,7 @@ Assuming your org is "TestOrg" and your Project is "TestProject" and your Test P
 
 Source code for test case with markings for an ADS test case. Note the suite_id and test_case id are required, the revision is optional and defaults to 1.  It is possible to have multiple test cases and test suites in a single test.  In such a case, the test results will be repeated for each suite_id and test case.  If the test case is not in the suite, then the results will not be reported.
 
+```
 @pytest.mark.regress_nightly
 @pytest.mark.regress_smoke
 @pytest.mark.suite_id("112233")
@@ -30,6 +31,7 @@ Source code for test case with markings for an ADS test case. Note the suite_id 
 def test_ads_integration_fail(logger):
     logger.info("This is a test of regression fail")
     assert False
+```
 
 From the ADS pipeline, execute this command (bash script pipeline step)
 
