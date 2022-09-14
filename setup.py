@@ -35,7 +35,7 @@ setup(
     description='Azure DevOps Test Case reporting for pytest tests',
     py_modules=['pytest_ads_testplan'],
     license='GPL v3',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     install_requires=reqs,
     entry_points={"pytest11": ["ads-testplan = pytest_ads_testplan"]},
     # custom PyPI classifier for pytest plugins
