@@ -234,7 +234,7 @@ class AdsTestPlugin(object):
         if bld_id:
             build = self.build_client.get_build(self.project, bld_id)
             print("Build Artifact: ", build)
-            self.build_number = build['build_number']
+            self.build_number = build.build_number
         else:
             build = None # detatched test run
 
