@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pytest-ads-testplan"
+version = "0.0.5"
+description = "Azure DevOps Test Case reporting for pytest tests"
+authors = ["Kurt Godwin <kurt-cb@github.com>"]
+license = "GPL v3"
+readme = "README.rst"
+packages = [{include = "pytest_ads_testplan.py"}]
+repository = "https://github.com/kurt-cb/pytest-ads-testplan"
+classifiers = ["Framework :: Pytest"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+azure-devops = "6.0.0b2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
